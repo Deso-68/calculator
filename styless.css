@@ -30,3 +30,12 @@ h1 {
     max-width: 100%;
     border-bottom: 0.3rem solid #e0e0e0;
 }
+
+.calculator-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: 400vh;
+    max-height: 70%;
+    max-width: 100%;
+}
