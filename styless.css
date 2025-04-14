@@ -39,3 +39,9 @@ h1 {
     max-height: 70%;
     max-width: 100%;
 }
+
+.calculator-buttons button {
+    width: 10vw;
+    height: 40vh;
+    cursor: pointer;
+}
