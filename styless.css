@@ -2,3 +2,11 @@ body {
     background-color: #000000;
     color: #e0e0e0;
 }
+
+.calculator-container-wrapper {
+    display: flex;
+}
+
+.calculator-container {
+    display: flex;
+}
