@@ -20,3 +20,7 @@ function subtractNumbers(first, second) {
 function multiplyNumbers(first, second) {
     return first * second;
 }
+
+function divideNumbers(first, second) {
+    return first / second;
+}
