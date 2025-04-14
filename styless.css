@@ -1,5 +1,5 @@
 body {
-    background-color: #000000;
+    background-color: #201f1f;
     color: #e0e0e0;
 }
 
@@ -13,4 +13,8 @@ h1 {
 
 .calculator-container {
     display: flex;
+    margin-top: 1rem;
+    border: 0.5rem solid #e0e0e0;
+    width: 40vw;
+    height: 80vh;
 }
