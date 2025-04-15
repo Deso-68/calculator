@@ -31,10 +31,7 @@ h1 {
     border-bottom: 0.3rem solid #e0e0e0;
 }
 
-.first-button-container,
-.second-button-container,
-.third-button-container,
-.fourth-button-container {
+.button-container {
     max-height: 25%;
     max-width: 100%;
 }
@@ -48,7 +45,7 @@ h1 {
     max-width: 100%;
 }
 
-.calculator-buttons button {
+.calculator-button {
     width: 10vw;
     height: 40vh;
     cursor: pointer;
