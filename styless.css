@@ -33,6 +33,7 @@ h1 {
     display: flex;
     max-width: 22%;
     max-height: 100%;
+    font-size: 2rem;
 }
 
 .operation-display div:nth-child(-n + 2)  {
