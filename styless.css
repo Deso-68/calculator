@@ -31,7 +31,7 @@ h1 {
     height: 25vh;
     max-height: 30%;
     max-width: 100%;
-    border-bottom: 0.3rem solid #e0e0e0;
+    border-bottom: 0.6em solid #e0e0e0;
 }
 
 .calculator-button-wrapper {
@@ -60,6 +60,7 @@ h1 {
     max-height: 100%;
     cursor: pointer;
     border: 1px solid black;
+    border-radius: 0.5rem;
     margin: 0px;
-    padding: 0px;
+    padding: 0.5rem;
 }
