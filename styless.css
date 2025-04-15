@@ -21,17 +21,59 @@ h1 {
 }
 
 .operation-display {
+    display: flex;
+    justify-content: space-between;
     width: 40rem;
     height: 20rem;
     max-height: 40%;
     max-width: 100%;
 }
 
+.operation-display div {
+    display: flex;
+    max-width: 22%;
+    max-height: 100%;
+}
+
+.operation-display div:nth-child(-n + 2)  {
+    display: flex;
+    justify-content: end;
+    max-height: 100%;
+    margin-right: 1rem;
+}
+
+.operation-display div button{
+    width: 40rem;
+    height: 20rem;
+    max-height: 80%;
+    max-width: 100%;
+    border-style: solid;
+    border-color: rgb(24, 24, 24);
+    border-radius: 0.5rem;
+}
+
+.operation-display .item-operation {
+    width: 10rem;
+    height: 20rem;
+    max-height: 80%;
+    max-width: 15%;
+    font-size: 2rem;
+}
+
 .result-display {
+    display: flex;
     width: 40rem;
     height: 20rem;
     max-height: 60%;
     max-width: 100%;
+    justify-content: end;
+    align-items: end;
+    font-size: 2rem;
+}
+
+.result-display .item-result{
+    margin-right: 11px;
+    font-size: 2.8rem;
 }
 
 .calculator-container-wrapper {
