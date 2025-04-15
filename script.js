@@ -10,6 +10,12 @@
 
 // Functions
 
+function populateDisplay() {
+    const itemOperation = document.querySelector(".item-operation");
+    const itemResult = document.querySelector(".item-result");
+
+}
+
 function operateNumbers(operator, first, second) {
     switch (operator) {
         case "+":
