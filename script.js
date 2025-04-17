@@ -56,5 +56,6 @@ function multiplyNumbers(first, second) {
 }
 
 function divideNumbers(first, second) {
-    return first / second;
+    const result = ((second / first).toFixed(1));
+    return +result;
 }
