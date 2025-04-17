@@ -17,15 +17,67 @@ function populateDisplay() {
     digitButtonClick(itemOperation);
 }
 
-function digitButtonClick(itemOperation) {
-    const digitButton = document.querySelectorAll(".calculator-button");
-    const digitArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    // console.log(digitButton.length);
+function bindEventEqualsTo(calculatorObject) {
+    calculatorObject.buttonNode[4].addEventListener("click", () => {
+        const a = calculatorObject.operator.textContent;
+        const b = calculatorObject.rightOperand.textContent;
+        const c = calculatorObject.leftOperand.textContent; 
 
-    for (let i = 5; i < digitButton.length; i++) {
-        digitButton[i].addEventListener("click", () => {
-            itemOperation.textContent = digitArray[i - 5]; 
-        });
+        const result = operateNumbers(a, b ,c);
+        if(a !== "" && b !== "" && c !== "") {
+            const result = operateNumbers(a, b ,c);
+            calculatorObject.resultDisplay.textContent = result;
+            calculatorObject.rightOperand.textContent = "";
+            calculatorObject.operator.textContent = "";
+        }
+    });
+}
+
+function clearAllButton(calculatorObject) {
+    calculatorObject.clearButton.addEventListener("click", () => {
+        calculatorObject.resultDisplay.textContent = 0;
+        calculatorObject.rightOperand.textContent = "";
+        calculatorObject.leftOperand.textContent = "";
+        calculatorObject.operator.textContent = "";
+    });
+}
+
+function bindEventToRightOperand(calculatorObject) {
+    for (let i = 5; i < calculatorObject.buttonNode.length; i++) {
+        handler = () => concatenateSecondDigit(calculatorObject, i);
+        calculatorObject.buttonNode[i].addEventListener("click", handler);
+    }
+}
+
+function concatenateSecondDigit(calculatorObject, i) {
+    const a = calculatorObject.rightOperand.textContent; 
+    const b = calculatorObject.buttonNode[i].textContent;
+    const c = a + b;    
+
+    if(calculatorObject.operator.textContent !== "" && 
+        calculatorObject.leftOperand.textContent !== "") {
+        calculatorObject.rightOperand.textContent = c; 
+    }
+}
+
+function bindEventToOperator(calculatorObject) {
+    for (let i = 0; i < calculatorObject.buttonNode.length - 11; i++) {
+        handler = () => showOperator(calculatorObject, i);
+        calculatorObject.buttonNode[i].addEventListener("click", handler);
+    }
+}
+
+function showOperator(calculatorObject, i) {
+    if(calculatorObject.leftOperand.textContent !== "" &&
+        calculatorObject.rightOperand.textContent === "") {
+        calculatorObject.operator.textContent = calculatorObject.buttonNode[i].textContent;
+    }
+}
+
+function bindEventToleftOperand(calculatorObject) {
+    for (let i = 5; i < calculatorObject.buttonNode.length; i++) {
+        handler = () => concatenateFirstDigit(calculatorObject, i);
+        calculatorObject.buttonNode[i].addEventListener("click", handler);
     }
 }
 
