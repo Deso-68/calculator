@@ -27,7 +27,18 @@ function digitButtonClick(itemOperation) {
             itemOperation.textContent = digitArray[i - 5]; 
         });
     }
-    console.log(digitButton)
+}
+
+function concatenateFirstDigit(calculatorObject, i) {
+    const a = calculatorObject.leftOperand.textContent; 
+    const b = calculatorObject.buttonNode[i].textContent;
+    const c = a + b;    
+
+    if(calculatorObject.operator.textContent === "" && 
+        calculatorObject.rightOperand.textContent === "") {
+            calculatorObject.leftOperand.textContent = c;
+        } 
+
 }
 
 function operateNumbers(operator, first, second) {
