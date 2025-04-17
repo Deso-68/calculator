@@ -11,10 +11,23 @@
 // Functions
 
 function populateDisplay() {
-    const itemOperation = document.querySelector(".item-operation");
-    const itemResult = document.querySelector(".item-result");
+    let calculatorObject = {};
+    calculatorObject.leftOperand = document.querySelector(".first-digit");
+    calculatorObject.operator = document.querySelector(".item-operator");
+    calculatorObject.rightOperand = document.querySelector(".second-digit");
+    calculatorObject.resultDisplay = document.querySelector("p.item-result")
+    calculatorObject.buttonNode = document.querySelectorAll(".calculator-button");
+    calculatorObject.clearButton = document.querySelector("button.clear-button");
+    obj = calculatorObject;
+    bindEventToleftOperand(calculatorObject);
 
-    digitButtonClick(itemOperation);
+    bindEventToOperator(calculatorObject);
+
+    bindEventToRightOperand(calculatorObject);
+
+    bindEventEqualsTo(calculatorObject);
+
+    clearAllButton(calculatorObject);
 }
 
 function bindEventEqualsTo(calculatorObject) {
