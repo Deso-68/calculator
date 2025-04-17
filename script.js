@@ -33,13 +33,13 @@ function digitButtonClick(itemOperation) {
 function operateNumbers(operator, first, second) {
     switch (operator) {
         case "+":
-            return addNumbers(first, second);
+            return addNumbers(+first, +second);
         case "-":
-            return subtractNumbers(first, second);
-        case "*":
-            return multiplyNumbers(first, second);
-        case "/":  
-            return divideNumbers(first, second);
+            return subtractNumbers(+first, +second);
+        case "✕":
+            return multiplyNumbers(+first, +second);
+        case "÷":  
+            return divideNumbers(+first, +second);
     }
 }
 
